@@ -161,13 +161,13 @@ jobs:
         if: ${{ steps.node20.outputs.supported == 'true' }}
         uses: actions/checkout@v4
         with:
-          repository: redis/redis
+          repository: sundb/redis
           ref: ${{ inputs.get-redis }}
           path: redis
       - name: Get Redis (node20 not supported)
         if: ${{ steps.node20.outputs.supported == 'false' }}
         run: |
-          REPO_URL="https://github.com/redis/redis.git"
+          REPO_URL="https://github.com/sundb/redis.git"
           DEST_DIR="redis"  # Directory to clone into
           
           # Clone the repository (shallow clone without tags)
