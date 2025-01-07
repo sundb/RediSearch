@@ -33,7 +33,7 @@ jobs:
     secrets: inherit
     uses: ./.github/workflows/task-test.yml
     with:
-      get-redis: unstable
+      get-redis: cron_free_argv_crash
       test-config: QUICK=1
       san: address
       env: ubuntu-latest
